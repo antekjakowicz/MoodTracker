@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MoodEntryFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:gravity="center"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Antkieta"
+            android:textSize="40dp"
+            android:fontFamily="sans-serif-black"
+            />
+
+        <RadioGroup
+            android:id="@+id/rgMood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            >
+
+            <RadioButton
+                android:id="@+id/rbHappy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wesoły ☺️" />
+
+            <RadioButton
+                android:id="@+id/rbNeutral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Przeciętny 😒"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                />
+
+            <RadioButton
+                android:id="@+id/rbSad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Smutny 😰" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Co się dziś wydarzyło?"
+            android:inputType="textMultiLine"
+            android:minLines="3" />
+
+        <CheckBox
+            android:id="@+id/cbSleptWell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bilem sie dzisiaj na ustawce?"
+            android:layout_marginTop="16dp" />
+
+        <CheckBox
+            android:id="@+id/cbWasActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bralem dzisiaj snusa?" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:numStars="5"
+            android:stepSize="1.0"
+            />
+
+        <Switch
+            android:id="@+id/switchImportant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chcę zapisać ten dzień jako ważny"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zapisz wpis"
+            android:layout_marginTop="24dp" />
+
+
+    </LinearLayout>
+
+</ScrollView>
