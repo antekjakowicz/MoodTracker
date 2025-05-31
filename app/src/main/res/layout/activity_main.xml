@@ -6,13 +6,32 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+
+<!--    <androidx.fragment.app.FragmentContainerView-->
+<!--        android:id="@+id/mood_entry_fragment"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:name="com.example.moodtracker.fragments.MoodEntryFragment"-->
+<!--        />-->
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="Moja aplikacja"
+        app:titleTextColor="#00BCD4"
+        app:background="?attr/colorPrimary" />
+
 
     <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/mood_entry_fragment"
+        android:id="@+id/nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.example.moodtracker.fragments.MoodEntryFragment"
-        />
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph"/>
 
 </LinearLayout>
