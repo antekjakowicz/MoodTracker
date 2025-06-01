@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#606060">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Formularz"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp" />
+
+        <RadioGroup
+            android:id="@+id/rgMood"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbHappy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wesoły ☺️"
+                android:textColor="@android:color/white" />
+
+            <RadioButton
+                android:id="@+id/rbNeutral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Przeciętny 😒"
+                android:textColor="@android:color/white"
+                android:layout_marginHorizontal="16dp" />
+
+            <RadioButton
+                android:id="@+id/rbSad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Smutny 😰"
+                android:textColor="@android:color/white" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Co się dziś wydarzyło?"
+            android:minLines="4"
+            android:backgroundTint="@android:color/white"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"
+            android:padding="8dp" />
+
+        <CheckBox
+            android:id="@+id/cbSleptWell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bilem się dzisiaj na ustawce?"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp" />
+
+        <CheckBox
+            android:id="@+id/cbWasActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Brałem dzisiaj snusa?"
+            android:textColor="@android:color/white" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1.0"
+            android:layout_marginTop="16dp"
+            android:progressTint="#FFEE58"/>
+
+
+        <Switch
+            android:id="@+id/switchImportant"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chcę zapisać ten dzień jako ważny"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="16dp"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+        <Button
+
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Zapisz wpis"
+            android:background="#303030"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="24dp"
+            android:paddingVertical="12dp" />
+    </LinearLayout>
+</ScrollView>
